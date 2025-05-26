@@ -50,7 +50,6 @@ public class UsuarioFlowTest {
 
     @Test
     void testLoginAndAccessProtectedRoute() throws Exception {
-        // 1. Simular login
         String loginRequest = """
             {
               "email": "test@dominio.cl",
@@ -65,11 +64,9 @@ public class UsuarioFlowTest {
                 .andExpect(jsonPath("$.token").exists())
                 .andReturn();
 
-        // 2. Extraer el token del response
         String responseBody = result.getResponse().getContentAsString();
         String token = JsonPath.read(responseBody, "$.token");
 
-        // 3. Acceder a endpoint protegido con el token
         mockMvc.perform(get("/api/usuario/listar")
                         .header("Authorization", "Bearer " + token))
                 .andExpect(status().isOk());
