@@ -141,3 +141,18 @@ Incluye:
 
 Puedes encontrar el código fuente aquí:  
 👉 [https://github.com/jadcve/NTT-Data-Test](https://github.com/jadcve/NTT-Data-Test)
+
+## 📄 Documentación
+
+La API cuenta con documentación interactiva generada automáticamente mediante **Swagger UI**, lo que facilita la exploración de los endpoints disponibles, sus parámetros, respuestas y pruebas en tiempo real desde el navegador.
+
+Una vez que la aplicación esté en ejecución, puedes acceder a la documentación completa en:
+
+👉 [http://localhost:8080/swagger-ui/index.html#/](http://localhost:8080/swagger-ui/index.html#/)
+
+Esta interfaz permite:
+
+- Visualizar todos los endpoints REST disponibles.
+- Ver ejemplos de request/response.
+- Ejecutar llamadas a la API directamente desde el navegador.
+- Validar el correcto funcionamiento de los servicios sin herramientas externas.
